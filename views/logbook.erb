@@ -1,0 +1,19 @@
+<table class = "table-bordered">
+<thead>
+<tr>
+<th>Имя</th>
+<th>Номер телефона</th>
+<th>Время записи</th>
+</tr>
+</thead>
+
+<% @logbook.each_line do |line| %>
+<tr>
+<%arr = line.split ','
+arr.each do |elem|
+ %>
+<td> <%=elem%> </td>
+<%end%>
+</tr>
+<% end %>
+</table>
