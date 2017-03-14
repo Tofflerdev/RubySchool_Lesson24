@@ -1,3 +1,4 @@
+#This is a comment
 require 'rubygems'
 require 'sinatra'
 require 'sinatra/reloader'
