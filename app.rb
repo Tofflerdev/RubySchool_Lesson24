@@ -74,9 +74,10 @@ error_message = {
 :text => "Enter your message"
 }
 
-@error = error_message.select{|key,value| params[key] == ''}.values.join(", ")
+err = error_message.select{|key,value| params[key] == ''}.values.join(", ")
 
-if @error != ''
+if err != ''
+	@error = err
 	erb :contactus
 
 else
