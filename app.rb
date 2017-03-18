@@ -62,4 +62,30 @@ post '/admin' do
 	
 
 	
+	end
+
+post '/contactus' do
+
+@name = params[:name]
+@text = params[:text]
+
+error_message = {
+:name => "Enter your name",
+:text => "Enter your message"
+}
+
+@error = error_message.select{|key,value| params[key] == ''}.values.join(", ")
+
+if @error != ''
+	erb :contactus
+
+else
+
+erb "Your message was sent"
+
+end
+
+
+
+
 end
