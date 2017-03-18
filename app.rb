@@ -23,6 +23,10 @@ get '/logbook' do
 	erb :lobook
 end	
 
+get '/contactus' do
+	erb :contactus
+end	
+
 post '/visit' do
 	@form_display = "none"
 	@username = params[:username]
